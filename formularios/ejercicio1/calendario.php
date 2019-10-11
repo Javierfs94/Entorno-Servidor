@@ -5,8 +5,8 @@
 * @author Francisco Javier Frías Serrano
  */
 
-$diasMes = cal_days_in_month(CAL_GREGORIAN, $_POST['mes'], $_POST['ano']);
-$primerDiaMes = strtotime($_POST['ano'] . "-" . $_POST['mes'] . "-01");
+$diasMes = cal_days_in_month(CAL_GREGORIAN, $_POST['mes'], $_POST['anno']);
+$primerDiaMes = strtotime($_POST['anno'] . "-" . $_POST['mes'] . "-01");
 $dia = date('N', $primerDiaMes);
 echo "<table border=2px;><tr>";
 echo "<td>Lunes</td>";

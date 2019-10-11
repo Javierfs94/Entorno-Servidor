@@ -9,3 +9,4 @@ echo "Mi edad es $edad";
 
 echo "<br/><a href='../verCodigo.php?src=".__FILE__."'><button>Ver Codigo</button></a>";    
 ?>
+   <a href="../../"><button>Volver</button></a>

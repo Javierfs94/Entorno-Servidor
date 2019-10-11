@@ -15,7 +15,9 @@
 
     echo "<br/><a href='../verCodigo.php?src=".__FILE__."'><button>Ver Codigo</button></a>";    
     ?>
-    </p>   
+       <a href="../../"><button>Volver</button></a>
+</p>
+       
 </body>
 
 </html>
