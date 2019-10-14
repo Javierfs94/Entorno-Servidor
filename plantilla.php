@@ -1,6 +1,10 @@
 <?php
-// Bloque de documentación: titulo, descripcion, autor, fecha
-
+/*
+* Titulo: 
+* Descripcion: 
+* Autor:
+* Fecha: 
+*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
