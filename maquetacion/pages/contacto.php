@@ -1,0 +1,6 @@
+<?php
+echo '<article>
+<h2>Contacto</h2>
+<p>Mi contacto es Mi contacto es: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at lectus feugiat, tincidunt mi in, cursus purus. Maecenas nec felis sodales odio consequat malesuada non eget lectus. Donec lacus dolor, tincidunt sed urna sit amet, venenatis mollis augue. Vivamus in sapien ornare, scelerisque quam at, suscipit eros. In hac habitasse platea dictumst. Vestibulum et mi magna. Donec tempus augue vel cursus fringilla. Proin metus nulla, congue quis sem at, pellentesque porta nisl. Cras nec est posuere, finibus enim quis, placerat neque. Mauris fermentum, ipsum ut placerat dapibus, turpis sem iaculis magna, eu finibus eros eros quis tortor. Fusce dolor dolor, laoreet eu posuere in, dignissim fringilla urna. Etiam sit amet risus tristique, viverra est eu, rhoncus metus. Quisque justo turpis, mollis et vehicula ac, venenatis quis neque. Proin scelerisque est at lobortis blandit. Sed sem ipsum, pharetra eget leo vitae, ornare aliquam elit. Quisque pretium sem in vulputate egestas. Vivamus nibh diam, iaculis at leo ac, egestas vestibulum ex. Morbi eleifend lectus vitae pulvinar suscipit. Mauris eu viverra ligula, ut posuere metus. Donec sed risus sagittis urna maximus vehicula at eu metus. Donec nec nunc arcu.</p>
+</article>';
+?>
