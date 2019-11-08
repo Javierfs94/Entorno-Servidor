@@ -1,5 +1,3 @@
-<!-- Estas en el PHP -->
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,11 +20,7 @@
                 }
                 if (($_GET["page"]=="servidor")) {
                   include("pages/entornoServidor.php"); 
-                } 
-                if (($_GET["page"]=="cliente")) {
-                  include("pages/entornoCliente.php"); 
-                }
-                
+                }                          
           }else {
             include("pages/home.php");
           }

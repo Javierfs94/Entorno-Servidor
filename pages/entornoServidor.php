@@ -62,13 +62,56 @@ echo '
 
 <h2>Proyectos</h2>
 <ul>
-    <li><a href="\dwes\proyectos\verbos_irregulares/verbosIrregulares.php">Verbos Irregulares</a></li>
+    <li><a href="\dwes\proyectos\verbosIrregulares.php">Verbos Irregulares</a></li>
 </ul>
 
-<h2>Ejercicios Complementarios</h2>
+<h2>Ejercicios Complementarios 1</h2>
 <ul>
-    <li><a href="\dwes\complementarios\salario.php">Salario</a></li>
-    <li><a href="\dwes\complementarios\area.php">Área de un triángulo</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio1.php">Ejercicio 1</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio2.php">Ejercicio 2</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio3.php">Ejercicio 3</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio4.php">Ejercicio 4</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio5.php">Ejercicio 5</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio6.php">Ejercicio 6</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio7.php">Ejercicio 7</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio8.php">Ejercicio 8</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio9.php">Ejercicio 9</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio10.php">Ejercicio 10</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio11.php">Ejercicio 11</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio12.php">Ejercicio 12</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio13.php">Ejercicio 13</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio14.php">Ejercicio 14</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio15.php">Ejercicio 15</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio16.php">Ejercicio 16</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio17.php">Ejercicio 17</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio18.php">Ejercicio 18</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio19.php">Ejercicio 19</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio20.php">Ejercicio 20</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio21.php">Ejercicio 21</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio22.php">Ejercicio 22</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio23.php">Ejercicio 23</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio24.php">Ejercicio 24</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio25.php">Ejercicio 25</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio26.php">Ejercicio 26</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio27.php">Ejercicio 27</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio28.php">Ejercicio 28</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio29.php">Ejercicio 29</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio30.php">Ejercicio 30</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio31.php">Ejercicio 31</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio32.php">Ejercicio 32</a></li>
+    <li><a href="\dwes\complementarios1\ejercicio33.php">Ejercicio 33</a></li>
+</ul>
+
+<h2>Ejercicios Complementarios 2</h2>
+<ul>
+    <li><a href="\dwes\complementarios2\ejercicio1.php">Ejercicio 1</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio2.php">Ejercicio 2</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio3.php">Ejercicio 3</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio4.php">Ejercicio 4</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio5.php">Ejercicio 5</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio6.php">Ejercicio 6</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio7.php">Ejercicio 7</a></li>
+    <li><a href="\dwes\complementarios2\ejercicio8.php">Ejercicio 8</a></li>    
 </ul>';
 ?>
 

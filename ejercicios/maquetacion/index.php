@@ -1,5 +1,4 @@
 <?php
-    // Bloque de documentación
     include("config/parametros.php");
 ?>
 
