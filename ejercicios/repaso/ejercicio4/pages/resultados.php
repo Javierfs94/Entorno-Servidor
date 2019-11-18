@@ -1,55 +1,10 @@
 <?php
-
-$personas = array(
-array('usuario' => 'Javier', 
-'pass' => '1234', 
-'perfil' => 'usuario'
-), 
-
-array('usuario' => 'Luis', 
-'pass' => 'afufu', 
-'perfil' => 'usuario'
-), 
-
-
-array('usuario' => 'Paco', 
-'pass' => 'pak', 
-'perfil' => 'alumno'
-), 
-
-array('usuario' => 'Ana', 
-'pass' => 'ana', 
-'perfil' => 'alumno'
-), 
-
-
-array('usuario' => 'María', 
-'pass' => 'mari', 
-'perfil' => 'alumno'
-), 
-
-array('usuario' => 'Jaime', 
-'pass' => 'pagina', 
-'perfil' => 'profesor'
-), 
-
-array('usuario' => 'Geralt', 
-'pass' => 'rivia', 
-'perfil' => 'profesor'
-), 
-
-array(
-    'usuario' => 'admin', 
-    'pass' => 'root', 
-    'perfil' => 'admin')
-);
-
-$usuariosTotales = 0;
-$usuarios = 0;
-$alumnos = 0;
-$profesores = 0;
-$admins = 0;
+$nombre = $_POST['nombre'];
+$genero = $_POST['genero'];
+$edad = $_POST['edad'];
+$idiomas = $_POST['idiomas'];
 ?>
+
 <?php
     include("../config/parametros.php");
 ?>
@@ -68,7 +23,7 @@ $admins = 0;
 <body>
 <?php
     include("../includes/cabecera.php");
-    ?>
+?>
 
 <nav>
 <ul>
@@ -77,51 +32,21 @@ $admins = 0;
 </nav>
 <?php
 
+echo "Nombre: $nombre<br>";
+echo "Genero: $genero<br>";
 
-echo '<h2>Tabla de usuarios</h2>
-<table border="1">
-<tr>
-<th>Usuario</th>
-<th>Pass</th>
-<th>Perfil</th>
-</tr>';
-foreach ($personas as $key =>  $value) {
-    echo   '<tr>';
-    foreach ($personas[$key] as $value2) {
-        echo "<td>$value2</td>";
-    }
-echo '</tr>';      
-   
+
+echo "<br>Idiomas: ";
+for ($i=0; $i < count($idiomas) ; $i++) { 
+    echo $idiomas[$i]."\t";
 }
 
-echo  '</table>';
 
-echo "<br>";
-
-foreach ($personas as $key =>  $value) {
-    $usuariosTotales++;
-    foreach ($personas[$key] as $key2 => $value2) { 
-        if ($key2 == 'perfil' && $value2 == 'usuario') {
-            $usuarios++;
-        }
-        if ($key2 == 'perfil' && $value2 == 'alumno') {
-            $alumnos++;
-        }
-        if ($key2 == 'perfil' && $value2 == 'profesor') {
-            $profesores++;
-        }        
-        if ($key2 == 'perfil' && $value2 == 'admin') {
-            $admins++;
-        }
-    }
-echo '</tr>';   
+if ($edad == 1) {
+    echo "Es menor de 18 años<br>";   
+}else{
+    echo "Es mayor de 18 años<br>";
 }
-
-echo "Número de usuarios en total: " . $usuariosTotales . "<br>";
-echo "Número de usuarios: " . $usuarios . "<br>";
-echo "Número de alumnos: " . $alumnos . "<br>";
-echo "Número de profesores: " . $profesores . "<br>";
-echo "Número de administradores: " . $admins. "<br>";
 
 
 ?>   
