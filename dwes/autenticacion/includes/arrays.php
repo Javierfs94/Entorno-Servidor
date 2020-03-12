@@ -1,0 +1,67 @@
+<?php
+$usuarios = array(
+    array(
+    "nombre"=>"usuario1",
+    "user"=>"user1",
+    "psw"=>"1234user1",
+    "perfil"=>"alumno"),
+    array(
+    "nombre"=>"usuario2",
+    "user"=>"user2",
+    "psw"=>"1234user2",
+    "perfil"=>"profesor"),
+    array(
+    "nombre"=>"usuario3",
+    "user"=>"user3",
+    "psw"=>"1234user3",
+    "perfil"=>"administrador")
+);
+
+$opcionesMenu = array(
+    "invitado"=>array(
+        array(
+            "msg"=>"opc1_pub",
+            "script"=>"home.php"
+            )
+    ),
+    "alumno"=>array(
+        array(
+            "msg"=>"opc1_pub",
+             "script"=>"home.php"),
+        array(
+            "msg"=>"opc2_alu",
+            "script"=>"alumno.php"
+        )
+    ),
+    "profesor"=>array(
+        array(
+            "msg"=>"opc1_pub",
+             "script"=>"home.php"),
+        array(
+            "msg"=>"opc2_alu",
+            "script"=>"alumno.php"
+        ),
+        array(
+            "msg"=>"opc2_prof",
+            "script"=>"profesor.php"
+        )
+    ),
+    "profesor"=>array(
+        array(
+            "msg"=>"opc1_pub",
+             "script"=>"home.php"),
+        array(
+            "msg"=>"opc2_alu",
+            "script"=>"alumno.php"
+        ),
+        array(
+            "msg"=>"opc2_prof",
+            "script"=>"profesor.php"
+        ),
+        array(
+            "msg"=>"opc3_admin",
+            "script"=>"admin.php"
+        )
+    ),
+);
+?>

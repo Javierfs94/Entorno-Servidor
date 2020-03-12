@@ -1,0 +1,64 @@
+div#login {
+    background-color: gray;
+    width: 30%;
+}
+
+div#add {
+    background-color: gray;
+    width: 30%;
+}
+
+header {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+}
+
+nav {
+    list-style: none;
+    text-align: center;
+    border: solid 1px black;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav li a {
+    background-color: rgb(9, 199, 247);
+    color: rgb(250, 243, 243);
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 5px;
+    display: block;
+}
+
+nav li a:hover {
+    background-color: #4adde2;
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+
+nav li:hover>ul {
+    display: block;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul li ul {
+    left: 150px;
+    top: 0px;
+}

@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-image: linear-gradient(rgb(230, 191, 20), rgb(230, 255, 1));
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    list-style: none;
+    text-align: center;
+    background-image: linear-gradient(rgb(230, 255, 1), rgb(230, 191, 20));
+}
+
+nav ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav>ul>li {
+    display: inline-block;
+}
+
+nav li a {
+    background-color: rgb(247, 9, 49);
+    color: rgb(250, 243, 243);
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 5px;
+    display: block;
+    border-radius: 20px;
+}
+
+nav li a:hover {
+    background-color: #bb2f2f;
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+
+nav li:hover>ul {
+    display: block;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul li ul {
+    left: 150px;
+    top: 0px;
+}
+
+footer {
+    border: solid 1px black;
+    background-image: linear-gradient( rgb(230, 191, 20), rgb(230, 255, 1));
+    text-align: center;
+}

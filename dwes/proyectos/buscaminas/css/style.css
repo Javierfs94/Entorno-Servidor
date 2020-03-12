@@ -1,0 +1,39 @@
+td {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+table,
+td {
+    border: black solid 1px;
+}
+
+.empty {
+    background-color: #cccccc;
+}
+
+.mine {
+    background-color: #ffabab;
+}
+
+.around1 {
+    background-color: #6eb5ff;
+}
+
+.around2 {
+    background-color: #bffcc6;
+}
+
+.around3 {
+    background-color: #fff5ba;
+}
+
+.around4 {
+    background-color: #c5a3ff;
+}
+
+.other {
+    background-color: #ff9cee;
+}
