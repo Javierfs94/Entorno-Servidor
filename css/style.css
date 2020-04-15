@@ -1,19 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
 }
 
 header {
-    background-image: linear-gradient(rgb(230, 191, 20), rgb(230, 255, 1));
+    background-image: linear-gradient(#2196f3, #6ec6ff);
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 header h1 {
     margin: 0;
+    padding-top: 1em;
 }
 
 nav {
     list-style: none;
     text-align: center;
-    background-image: linear-gradient(rgb(230, 255, 1), rgb(230, 191, 20));
+    background-image: linear-gradient(#6ec6ff, #2196f3);
+    padding-bottom: 1em;
 }
 
 nav ul {
@@ -58,10 +68,31 @@ nav ul li ul li ul {
     top: 0px;
 }
 
+main {
+    margin: 1em;
+    text-align: center;
+}
+
+main>h2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#social-media {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#social-media p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 #container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1em;
+    padding-bottom: 1em;
 }
 
 #container div {
@@ -70,7 +101,21 @@ nav ul li ul li ul {
     padding: 20px;
 }
 
+#container h2 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+#container div li {
+    list-style: none;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    text-align: center;
+}
+
 footer {
-    border: solid 1px black;
-    background-image: linear-gradient( rgb(230, 191, 20), rgb(230, 255, 1));
+    background-image: linear-gradient(#2196f3, #6ec6ff);
+    text-align: center;
+    padding: 1em 0 1em 0;
 }
