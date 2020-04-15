@@ -11,6 +11,7 @@
 ?>
 
 <?php
+  // Includes
   include "DNI.php";
   include "funciones.php";
 ?>
@@ -35,8 +36,9 @@
     <p>3. Untilizando la funcion anterior crea un array que almacene los primeros 5 números primos</p>
 </div>
 
+<!-- Formulario -->
 
-<form action="index.php" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   <p>DNI: <input type="text" name="dni"><br></p>
   <p>Número: <input type="number" name="numero"><br></p>
   <input type="submit" name="enviar" value="Enviar">
@@ -46,24 +48,25 @@
 <?php
 
 if (isset($_POST["enviar"])){
+  // Comprobación de si se ha introducido un DNI
   if (isset($_POST["dni"]) && ($_POST["dni"] != "")){
       $dni = new DNI($_POST["dni"]);
-      echo $dni->getMensaje()."<br>";
+      echo "<p>".$dni->getMensaje()."</p>";
   }
 
+  // Comprobación de si se ha introducido un número primo
   if (isset($_POST["numero"]) && ($_POST["numero"] != "")){
-    if (comprobarSiEsPrimo($_POST["numero"])) {
-        echo $_POST["numero"]." es primo";
+    if (esPrimo($_POST["numero"])) {
+        echo "<p>".$_POST["numero"]." es primo</p>";
     }else{
-        echo $_POST["numero"]." no es primo";
+        echo "<p>".$_POST["numero"]." no es primo</p>";
       }
     }
 }
 
+//Mostrar los 5 primeros números primos
 cincoPrimerosPrimos();
-
 ?>
-
 
 <?php
     echo "<br/><a href='../../verCodigo.php?src=".__FILE__."'><button>Ver Codigo</button></a>";    

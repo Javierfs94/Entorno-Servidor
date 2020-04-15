@@ -3,12 +3,18 @@ class DNI{
     private $_dni;
     private $_mensaje = "";
     
+    /**
+     * Constructor DNI. Recibe el DNI completo con su número y letra
+     */
     public function __construct($dni){
         $this->_dni = $this->validar_dni($dni);
     }
     
+    /**
+     * Comprueba que el DNI pasado por el usuario sea válido o no
+     */
     private function validar_dni($dni){
-        $letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        $letras = "TRWAGMYFPDXBNJZSQVHLCKE"; 
         $letraDNI = strtoupper(substr($dni, -1));
         $numeros = substr($dni, 0, -1);
 
@@ -19,6 +25,9 @@ class DNI{
         }
     }
 
+    /**
+     * Devuelve un mensaje según la validez del DNI
+     */
     public function getMensaje(){
         return $this->_mensaje;
     }
