@@ -1,6 +1,6 @@
 <?php
 /*
-* Titulo: Ejercicios de repaso
+* Titulo: Ejercicios de repaso 1
 * Descripcion: 
 * 1. Crear una clase dni. Utiliza un método para su correcta validación.
 * 2. Escribe una función que determine si un número es primo.
@@ -69,9 +69,9 @@ cincoPrimerosPrimos();
 ?>
 
 <?php
-    echo "<br/><a href='../../verCodigo.php?src=".__FILE__."'><button>Ver Codigo</button></a>";    
+  // Boton para ir al repositorio del ejercicio
+    echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/repaso1'><button>Repositorio</button></a>";    
 ?>
-    <a href="../../../"><button>Volver</button></a>
 
 </body>
 
