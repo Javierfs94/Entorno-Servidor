@@ -37,7 +37,7 @@
 </div>
 
 <!-- Formulario -->
-
+<h2>Formulario de datos</h2>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
   <p>DNI: <input type="text" name="dni"><br></p>
   <p>Número: <input type="number" name="numero"><br></p>
