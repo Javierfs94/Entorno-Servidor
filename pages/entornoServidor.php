@@ -96,6 +96,14 @@ echo '<div id="container">
         <li><a href="dwes\complementarios\barcos\index.php">Barcos</a></li>
         <li><a href="dwes\complementarios\sopa_letras\index.php">Sopa de letras</a></li>
         <li><a href="dwes\complementarios\series\index.php">Series favoritas</a></li>
+        <li><a href="dwes\complementarios\siete_y_media\index.php">Siete y media</a></li>
+    </ul>
+</div>
+
+
+<div id="repaso-semanal">
+    <h2>Ejercicios de repaso semanal</h2>
+    <ul>
         <li><a href="dwes\complementarios\repaso1\index.php">Ejercicios de repaso de la semana 1</a></li>
     </ul>
 </div>
