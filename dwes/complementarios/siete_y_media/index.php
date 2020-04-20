@@ -11,6 +11,9 @@
 include "./class/Carta.php";
 session_start();
 
+/**
+ * Devuelve el ganador de la partida
+ */
 function juego(){    
   if (getPuntos($_SESSION["jugador"])<= 7.5 && getPuntos($_SESSION["jugador"]) > getPuntos($_SESSION["banca"]) || getPuntos($_SESSION["jugador"])<= 7.5 &&  getPuntos($_SESSION["banca"]) > 7.5) {
     $ganador = "El jugador";  
@@ -23,18 +26,27 @@ function juego(){
   return "<h2>¡".$ganador." ha ganado!</h2>";
 }
 
+/**
+ * Genera la mano de la banca
+ */
 function generarManoBanca(){
   do {
     $carta = array_pop($_SESSION["baraja"]);
     array_push($_SESSION["banca"], $carta);
-  } while (getPuntos($_SESSION["banca"]) <= 6.5);
+  } while (getPuntos($_SESSION["banca"]) <= 5.5);
 }
 
+/**
+ * Devuelve la última carta de la baraja y se la añade a la mano del jugador
+ */
 function sacarCartaJugador(){
   $carta = array_pop($_SESSION["baraja"]);
   array_push($_SESSION["jugador"], $carta);
 }
 
+/**
+ * Devuelve los puntos de la mano pasada como parámetro
+ */
 function getPuntos($mano){
   $puntos = 0;
   foreach ($mano as $key => $carta) {
@@ -47,7 +59,7 @@ function getPuntos($mano){
   return $puntos;
 }
 
-  if (!isset($_SESSION['baraja'])){
+if (!isset($_SESSION['baraja'])){
     $_SESSION['baraja'] = array();
     $_SESSION["jugador"] = array();
     for ($i=0; $i < 4; $i++) {
@@ -93,7 +105,6 @@ for ($i=0; $i < sizeof($_SESSION["jugador"]); $i++) {
 
 echo "<p>Puntos del jugador: ".getPuntos($_SESSION["jugador"])."</p>";
 
-
 if (isset($_POST["plantarse"])) {
   $_SESSION["partida"] = false;
   echo juego();
@@ -119,14 +130,14 @@ if ($_SESSION["partida"]) {
     <input type='submit' name='plantarse' value='Plantarse carta' disabled>
   </form>";
 }
-?>
 
+?>
 
 <p><button><a href="reiniciarBaraja.php">Reiniciar partida</a></button></p>
 
 <?php
   // Boton para ir al repositorio del ejercicio
-  echo "<br/><a href=''><button>Repositorio</button></a>";    
+  echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/siete_y_media'><button>Repositorio</button></a>";    
 ?>
 
 </div>
