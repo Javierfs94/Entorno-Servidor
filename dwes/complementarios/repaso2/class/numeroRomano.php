@@ -43,7 +43,7 @@ class NumeroRomano{
         return $arrayValores;
     }
 
-    public function romanoAArabigo(){
+    public function romanToArabic(){
         $valorTotal = 0;
         $limite = count($this->_numero) - 1;
         foreach ($this->_numero as $indice => $valor) {

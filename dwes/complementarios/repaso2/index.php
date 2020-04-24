@@ -45,9 +45,9 @@ if (isset($_POST["enviar"])){
       $numeroRomano = new NumeroRomano($_POST["numeroRomano"]);
   }
 }
-if (isset($_POST["numeroRomano"]) && ($_POST["numeroRomano"] != "") && $numeroRomano->conversor() != 0){
+if (isset($_POST["numeroRomano"]) && ($_POST["numeroRomano"] != "") && $numeroRomano->romanToArabic() != 0){
   echo "<br>";
-  echo $numeroRomano->conversor();
+  echo $numeroRomano->romanToArabic();
 }elseif(isset($_POST["numeroRomano"]) && ($_POST["numeroRomano"] != "")){
   echo "<p style='color: red;'>Introduzca solo números romanos</p>";
 }
