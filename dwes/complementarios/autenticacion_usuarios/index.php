@@ -13,8 +13,6 @@
 ?>
 
 <?php
-  // Includes
-  // include "";
   session_start();
 ?>
 

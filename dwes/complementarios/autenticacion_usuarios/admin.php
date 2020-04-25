@@ -20,7 +20,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["password"])) {
 
 if (!isset($_SESSION["usuarios"])) {
     $_SESSION["usuarios"] = array();
-    $fp = fopen("usuarios.txt", "w+");
+    $fp = fopen("usuarios.txt", "a+");
     while (!feof($fp)){
         $linea = fgets($fp);
         array_push($_SESSION["usuarios"], $linea);
@@ -34,7 +34,7 @@ if(isset($_POST["newusername"]) &&  isset($_POST["newpassword"])){
 }
 
 if (isset($_POST["logout"])) {
-    $myfile = fopen("usuarios.txt", "w+") or die("Unable to open file!");
+    $myfile = fopen("usuarios.txt", "a+") or die("Unable to open file!");
     $txt = "";
     foreach ($_SESSION["usuarios"] as $key => $usuario) {
         $txt = $txt .  $usuario."\n";
