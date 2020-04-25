@@ -31,7 +31,6 @@ if (!isset($_SESSION["usuarios"])) {
 if(isset($_POST["newusername"]) &&  isset($_POST["newpassword"])){
     $cadena = $_POST["newusername"]." ". $_POST["newpassword"];
     array_push($_SESSION["usuarios"], $cadena);
-    var_dump($_SESSION["usuarios"]);
 }
 
 if (isset($_POST["logout"])) {
@@ -65,14 +64,9 @@ if (isset($_POST["logout"])) {
 </form>
 
 
-
-
-
-
-
 <?php
   // Boton para ir al repositorio del ejercicio
-    echo "<br/><a href=''><button>Repositorio</button></a>";    
+  echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/autenticacion_usuarios'><button>Repositorio</button></a>";    
 ?>
 
 </body>

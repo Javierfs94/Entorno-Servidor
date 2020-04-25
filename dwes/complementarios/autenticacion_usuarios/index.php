@@ -33,9 +33,6 @@
 
 <?php
 
-
-
-
 if(isset($_POST["username"]) &&  isset($_POST["password"])){
   $_SESSION["username"] = $_POST["username"];
   $_SESSION["password"] = $_POST["password"];
@@ -54,10 +51,6 @@ if(isset($_POST["username"]) &&  isset($_POST["password"])){
   }
 }
 
-if (isset($_POST["logout"])) {
-  header("Location: logout.php");
-}
-
 ?>
 
 
@@ -73,14 +66,9 @@ if (isset($_POST["logout"])) {
     <button type="submit" name="login" value="login">Log In</button>
 </form>
 
-<form method="post" action="admin.php" name="signin-form">
-    <button type="submit" name="logout" value="logout">Log Out</button>
-</form>
-
-
 <?php
   // Boton para ir al repositorio del ejercicio
-    echo "<br/><a href=''><button>Repositorio</button></a>";    
+    echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/autenticacion_usuarios'><button>Repositorio</button></a>";    
 ?>
 
 </body>

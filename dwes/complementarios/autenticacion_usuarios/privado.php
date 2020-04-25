@@ -35,7 +35,7 @@ if (isset($_POST["logout"])) {
 
 <?php
   // Boton para ir al repositorio del ejercicio
-    echo "<br/><a href=''><button>Repositorio</button></a>";    
+  echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/autenticacion_usuarios'><button>Repositorio</button></a>";    
 ?>
 
 </body>
