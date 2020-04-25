@@ -20,7 +20,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["password"])) {
 
 if (!isset($_SESSION["usuarios"])) {
     $_SESSION["usuarios"] = array();
-    $fp = fopen("usuarios.txt", "r");
+    $fp = fopen("usuarios.txt", "w+");
     while (!feof($fp)){
         $linea = fgets($fp);
         array_push($_SESSION["usuarios"], $linea);
