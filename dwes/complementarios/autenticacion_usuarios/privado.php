@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Autenticación de usuarios</title>
+    <title>Autenticación de usuarios (Usuarios)</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@ if (isset($_POST["logout"])) {
 }
 ?>
 
-<form method="post" action="admin.php" name="signin-form">
+<form method="post" action="privado.php" name="signin-form">
     <button type="submit" name="logout" value="logout">Log Out</button>
 </form>
 
