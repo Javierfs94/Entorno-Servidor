@@ -34,7 +34,7 @@ if(isset($_POST["newusername"]) &&  isset($_POST["newpassword"])){
 }
 
 if (isset($_POST["logout"])) {
-    $myfile = fopen("usuarios.txt", "w") or die("Unable to open file!");
+    $myfile = fopen("usuarios.txt", "w+") or die("Unable to open file!");
     $txt = "";
     foreach ($_SESSION["usuarios"] as $key => $usuario) {
         $txt = $txt .  $usuario."\n";
