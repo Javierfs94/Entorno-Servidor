@@ -33,8 +33,6 @@ if (!isset($_SESSION["perfil"])) {
 }
 
 if(isset($_POST["username"]) &&  isset($_POST["password"])){
-  // $_SESSION["username"] = $_POST["username"];
-  // $_SESSION["password"] = $_POST["password"];
   $result = $conn->query("SELECT username, pass FROM usuarios WHERE username='".$_POST["username"]."' AND pass='".$_POST["password"]."'");
 
   if(mysqli_num_rows($result)>=1){
@@ -68,9 +66,6 @@ if(isset($_POST["newusername"]) &&  isset($_POST["newpassword"])){
       echo "Error: " . $sql . "<br>" . $conn->error;
     }
   }
-
-
- 
 
   $conn->close();
 
@@ -131,7 +126,7 @@ if (isset($_SESSION["perfil"]) && $_SESSION["perfil"] == "admin") {
 
 <?php
   // Boton para ir al repositorio del ejercicio
-    echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/autenticacion_usuarios'><button>Repositorio</button></a>";    
+    echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/autenticacion_usuarios_conBBDD'><button>Repositorio</button></a>";    
 ?>
 
 </body>

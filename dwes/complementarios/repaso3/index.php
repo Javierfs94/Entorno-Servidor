@@ -102,7 +102,7 @@ foreach ($cartas as $key => $datos) {
 
 <?php
   // Boton para ir al repositorio del ejercicio
-    echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/repaso2'><button>Repositorio</button></a>";    
+    echo "<br/><a href='https://github.com/Javierfs94/Entorno-Servidor/tree/master/dwes/complementarios/repaso3'><button>Repositorio</button></a>";    
 ?>
 
 </body>
