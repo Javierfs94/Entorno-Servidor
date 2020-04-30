@@ -97,6 +97,10 @@ echo '<div id="container">
         <li><a href="dwes\complementarios\sopa_letras\index.php">Sopa de letras</a></li>
         <li><a href="dwes\complementarios\series\index.php">Series favoritas</a></li>
         <li><a href="dwes\complementarios\siete_y_media\index.php">Siete y media</a></li>
+        <li><a href="dwes\complementarios\generacion_usuarios\index.php">Generación de usuarios</a></li>
+        <li><a href="dwes\complementarios\autenticacion_usuarios\index.php">Sistema de autentificación básico de usuarios</a></li>
+        <li><a href="dwes\complementarios\autenticacion_usuarios_conBBDD\index.php">Sistema de autentificación básico de usuarios con BBDD</a></li>
+        <li><a href="dwes\complementarios\puzzle\index.php">Puzzle Infantil</a></li>
     </ul>
 </div>
 
@@ -105,6 +109,8 @@ echo '<div id="container">
     <h2>Ejercicios de repaso semanal</h2>
     <ul>
         <li><a href="dwes\complementarios\repaso1\index.php">Ejercicios de repaso de la semana 1</a></li>
+        <li><a href="dwes\complementarios\repaso2\index.php">Ejercicios de repaso de la semana 2</a></li>
+        <li><a href="dwes\complementarios\repaso3\index.php">Ejercicios de repaso de la semana 3</a></li>
     </ul>
 </div>
 
