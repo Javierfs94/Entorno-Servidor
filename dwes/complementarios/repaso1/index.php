@@ -4,7 +4,7 @@
 * Descripcion: 
 * 1. Crear una clase dni. Utiliza un método para su correcta validación.
 * 2. Escribe una función que determine si un número es primo.
-* 3. Untilizando la funcion anterior crea un array que almacene los primeros 5 números primos
+* 3. Utilizando la funcion anterior crea un array que almacene los primeros 5 números primos
 * 
 * Autor: Francisco Javier Frías Serrano
 */
@@ -28,13 +28,6 @@
 </head>
 
 <body>
-
-<div>
-    <h2>Ejercicios de repaso de la semana 1</h2>
-    <p>1. Crear una clase dni. Utiliza un método para su correcta validación.</p>
-    <p>2. Escribe una función que determine si un número es primo.</p>
-    <p>3. Untilizando la funcion anterior crea un array que almacene los primeros 5 números primos</p>
-</div>
 
 <!-- Formulario -->
 <h2>Formulario de datos</h2>

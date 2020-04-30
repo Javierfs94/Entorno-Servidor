@@ -1,38 +1,38 @@
-sudo useradd arsema 
-sudo passwd arsema 
-sudo useradd bugaju 
-sudo passwd bugaju 
-sudo useradd crrlra 
-sudo passwd crrlra 
-sudo useradd frseja 
-sudo passwd frseja 
-sudo useradd frseja0 
-sudo passwd frseja0 
-sudo useradd frseja1 
-sudo passwd frseja1 
-sudo useradd frseja2 
-sudo passwd frseja2 
-sudo useradd goprju 
-sudo passwd goprju 
-sudo useradd gosafr 
-sudo passwd gosafr 
-sudo useradd letorl 
-sudo passwd letorl 
-sudo useradd lojija 
-sudo passwd lojija 
-sudo useradd lrcrra 
-sudo passwd lrcrra 
-sudo useradd luresa 
-sudo passwd luresa 
-sudo useradd momoad 
-sudo passwd momoad 
-sudo useradd murvpa 
-sudo passwd murvpa 
-sudo useradd nicara 
-sudo passwd nicara 
-sudo useradd prjacr 
-sudo passwd prjacr 
-sudo useradd srrofr 
-sudo passwd srrofr 
-sudo useradd uresra 
-sudo passwd uresra 
+CREATE USER 'arsema'@'localhost' IDENTIFIED BY 'arsema' 
+GRANT ALL PRIVILEGES ON * . * TO 'arsema'@'localhost' 
+CREATE USER 'bugaju'@'localhost' IDENTIFIED BY 'bugaju' 
+GRANT ALL PRIVILEGES ON * . * TO 'bugaju'@'localhost' 
+CREATE USER 'cralra'@'localhost' IDENTIFIED BY 'cralra' 
+GRANT ALL PRIVILEGES ON * . * TO 'cralra'@'localhost' 
+CREATE USER 'frseja'@'localhost' IDENTIFIED BY 'frseja' 
+GRANT ALL PRIVILEGES ON * . * TO 'frseja'@'localhost' 
+CREATE USER 'frseja0'@'localhost' IDENTIFIED BY 'frseja0' 
+GRANT ALL PRIVILEGES ON * . * TO 'frseja0'@'localhost' 
+CREATE USER 'frseja1'@'localhost' IDENTIFIED BY 'frseja1' 
+GRANT ALL PRIVILEGES ON * . * TO 'frseja1'@'localhost' 
+CREATE USER 'frseja2'@'localhost' IDENTIFIED BY 'frseja2' 
+GRANT ALL PRIVILEGES ON * . * TO 'frseja2'@'localhost' 
+CREATE USER 'goprju'@'localhost' IDENTIFIED BY 'goprju' 
+GRANT ALL PRIVILEGES ON * . * TO 'goprju'@'localhost' 
+CREATE USER 'gosafr'@'localhost' IDENTIFIED BY 'gosafr' 
+GRANT ALL PRIVILEGES ON * . * TO 'gosafr'@'localhost' 
+CREATE USER 'letoal'@'localhost' IDENTIFIED BY 'letoal' 
+GRANT ALL PRIVILEGES ON * . * TO 'letoal'@'localhost' 
+CREATE USER 'lojija'@'localhost' IDENTIFIED BY 'lojija' 
+GRANT ALL PRIVILEGES ON * . * TO 'lojija'@'localhost' 
+CREATE USER 'locrra'@'localhost' IDENTIFIED BY 'locrra' 
+GRANT ALL PRIVILEGES ON * . * TO 'locrra'@'localhost' 
+CREATE USER 'luresa'@'localhost' IDENTIFIED BY 'luresa' 
+GRANT ALL PRIVILEGES ON * . * TO 'luresa'@'localhost' 
+CREATE USER 'momoad'@'localhost' IDENTIFIED BY 'momoad' 
+GRANT ALL PRIVILEGES ON * . * TO 'momoad'@'localhost' 
+CREATE USER 'muavpa'@'localhost' IDENTIFIED BY 'muavpa' 
+GRANT ALL PRIVILEGES ON * . * TO 'muavpa'@'localhost' 
+CREATE USER 'nicara'@'localhost' IDENTIFIED BY 'nicara' 
+GRANT ALL PRIVILEGES ON * . * TO 'nicara'@'localhost' 
+CREATE USER 'prjacr'@'localhost' IDENTIFIED BY 'prjacr' 
+GRANT ALL PRIVILEGES ON * . * TO 'prjacr'@'localhost' 
+CREATE USER 'sarofr'@'localhost' IDENTIFIED BY 'sarofr' 
+GRANT ALL PRIVILEGES ON * . * TO 'sarofr'@'localhost' 
+CREATE USER 'uresra'@'localhost' IDENTIFIED BY 'uresra' 
+GRANT ALL PRIVILEGES ON * . * TO 'uresra'@'localhost' 

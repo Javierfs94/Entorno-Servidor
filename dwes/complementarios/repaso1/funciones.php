@@ -17,7 +17,7 @@ function esPrimo($numero) {
 function cincoPrimerosPrimos(){
     $cincoPrimos = array();
   
-    for ($i=0; $i < 100; $i++) { 
+    for ($i=2; $i < 100; $i++) { 
         if (esPrimo($i)) {
             array_push( $cincoPrimos, $i);
         }

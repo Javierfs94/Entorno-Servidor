@@ -15,55 +15,68 @@
 <?php
 session_start();
 
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "auten_users";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 if (!isset($_SESSION["perfil"])) {
   $_SESSION["perfil"] = "invitado";
 }
 
 if(isset($_POST["username"]) &&  isset($_POST["password"])){
-  $_SESSION["username"] = $_POST["username"];
-  $_SESSION["password"] = $_POST["password"];
+  // $_SESSION["username"] = $_POST["username"];
+  // $_SESSION["password"] = $_POST["password"];
+  $result = $conn->query("SELECT username, pass FROM usuarios WHERE username='".$_POST["username"]."' AND pass='".$_POST["password"]."'");
 
-  $fp = fopen("usuarios.txt", "r");
-  while ($linea = fgets($fp)) {
-    $lineaSeparada = preg_split('/\s+/', $linea);
-    if ($_POST["username"] == $lineaSeparada[0] && $_POST["password"] == $lineaSeparada[1]) {
-      $_SESSION["perfil"] = "registrado";
-      header('Location: privado.php'); 
-    }
+  if(mysqli_num_rows($result)>=1){
+   $_SESSION["perfil"] = "registrado";
+   header('Location: privado.php');
+   $result->close();
   }
-  fclose($fp);
+  else{
+    echo "<p>El usuario no existe</p>";
+  }
 
   if ($_POST["username"] == "admin" && $_POST["password"] == "admin") {
     $_SESSION["perfil"] = "admin";
     header('Location: index.php'); 
   }
-}
 
-if (!isset($_SESSION["usuarios"])) {
-  $_SESSION["usuarios"] = array();
-  $fp = fopen("usuarios.txt", "a+");
-  while (!feof($fp)){
-      $linea = fgets($fp);
-      array_push($_SESSION["usuarios"], $linea);
-  }
-  fclose($fp);
 }
 
 if(isset($_POST["newusername"]) &&  isset($_POST["newpassword"])){
-  $cadena = $_POST["newusername"]." ". $_POST["newpassword"];
-  array_push($_SESSION["usuarios"], $cadena);
+
+  $sql = "INSERT INTO usuarios (username, pass) VALUES ('".$_POST["newusername"] ."','".$_POST["newpassword"]."')";
+
+  $result = $conn->query("SELECT username FROM usuarios WHERE username='".$_POST["newusername"]."'");
+
+  if(mysqli_num_rows($result)>=1){
+    echo "<p>El usuario ya existe</p>";
+  }else{
+    if ($conn->query($sql) === TRUE) {
+      echo "<p>Usuario creado satisfacctoriamente</p>";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+  }
+
+
+ 
+
+  $conn->close();
+
 }
 
 if (isset($_POST["logout"])) {
-  $myfile = fopen("usuarios.txt", "a+") or die("Unable to open file!");
-  $txt = "";
-  foreach ($_SESSION["usuarios"] as $key => $usuario) {
-      $txt = $txt .  $usuario."\n";
-  }
-  fwrite($myfile, $txt);
-  fclose($myfile);
   header("Location: logout.php");
 }
 
@@ -115,7 +128,6 @@ if (isset($_SESSION["perfil"]) && $_SESSION["perfil"] == "admin") {
  
 }
 ?>
-
 
 <?php
   // Boton para ir al repositorio del ejercicio

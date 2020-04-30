@@ -32,33 +32,6 @@
 
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "generar_usuarios";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// sql to create table
-$sql = "CREATE TABLE usuarios (
-id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-usuario VARCHAR(30) NOT NULL
-)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "<p>Table generar_usuarios created successfully</p>";
-} else {
-    echo "<p>Error creating table: " . $conn->error . "</p>";
-}
-
-$conn->close();
-
-
 if (isset($_POST["enviar"])) {
     $file = fopen("alumnos.txt", "r");
     $contador = 0;

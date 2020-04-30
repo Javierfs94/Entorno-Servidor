@@ -33,7 +33,29 @@
 
 <?php
     include "Flota.php";
+    session_start();
+    $mensaje = "";
+    // Control de los inputs de entrada
+
+    if (isset( $_SESSION["flota"])) {
+        $_SESSION["flota"] = new Flota();
+    }
+
+    if (isset( $_POST["enviar"])) {
+        $_SESSION["flota"]->guardarDisparo(array($_POST["fila"]));
+        $_SESSION["flota"]->dispara($_POST["fila"],$_POST["columna"]);
+        $mensaje = $_SESSION["flota"]->getMensaje();
+    }
+
+    $_SESSION["flota"]->mostrarFlota();
+
+    if (condition) {
+        # code...
+    } else {
+        # code...
+    }
     
+
     $barco = null;
     $tipo = 1;
     $flota= new Flota();

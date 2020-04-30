@@ -4,6 +4,10 @@ include "barco.php";
 class Flota {
     public $_tablero = array();
     public $barcos = array();
+    public $lanzamientos = array();
+
+
+
 
     public function __construct(){
         for($i=0;$i<10;$i++){
@@ -14,6 +18,16 @@ class Flota {
     public function addBarco($barco){
         $this->_barcos[] = $barco;
     }
+
+
+    public function guardarDisparo($coordenada){
+        $this->_lanzamientos[] = $coordenada;
+    }
+
+    public function dispara($coordenada){
+        $this->_lanzamientos[] = $coordenada;
+    }
+
 
     public function colocarBarcos(){
         $direccion = array("N","S","E","O");
