@@ -1,5 +1,9 @@
 <?php
   session_start();
+
+  if (isset($_POST["logout"])) {
+    header("Location: logout.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -16,15 +20,10 @@
 <body>
 
 <?php
-
 if ($_SESSION["perfil"] == "registrado") {
   echo "<h2>La cara oculta de la luna</h2>";
 } else {
   header("Location: index.php");
-}
-
-if (isset($_POST["logout"])) {
-  header("Location: logout.php");
 }
 ?>
 

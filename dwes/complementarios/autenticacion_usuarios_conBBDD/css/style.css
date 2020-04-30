@@ -16,6 +16,12 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-family: 'Passion One';
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
 label {
     width: 150px;
     display: inline-block;

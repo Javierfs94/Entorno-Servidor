@@ -34,7 +34,6 @@ if (!isset($_SESSION["perfil"])) {
 
 if(isset($_POST["username"]) &&  isset($_POST["password"])){
   $result = $conn->query("SELECT username, pass FROM usuarios WHERE username='".$_POST["username"]."' AND pass='".$_POST["password"]."'");
-
   if(mysqli_num_rows($result)>=1){
    $_SESSION["perfil"] = "registrado";
    header('Location: privado.php');
@@ -108,6 +107,9 @@ if (isset($_SESSION["perfil"]) && $_SESSION["perfil"] == "admin") {
 <form method='post' action='index.php' name='signin-form'>
   <button type='submit' name='logout' value='logout'>Log Out</button>
 </form>";
+
+
+
 }else {
   echo "<form method='post' action='index.php' name='signin-form'>
   <div class='form-element'>
