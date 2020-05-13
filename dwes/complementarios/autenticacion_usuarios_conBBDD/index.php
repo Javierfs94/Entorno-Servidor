@@ -14,14 +14,10 @@
 
 <?php
 session_start();
-
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "auten_users";
+include "./config/config.php";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 
 // Check connection
 if ($conn->connect_error) {
@@ -33,14 +29,16 @@ if (!isset($_SESSION["perfil"])) {
 }
 
 if(isset($_POST["username"]) &&  isset($_POST["password"])){
-  $result = $conn->query("SELECT username, pass FROM usuarios WHERE username='".$_POST["username"]."' AND pass='".$_POST["password"]."'");
+
+  $result = $conn->query("SELECT username, pass FROM usuarios WHERE username='".$_POST["username"]."' AND pass='".$_POST["password"]."'"); 
+
   if(mysqli_num_rows($result)>=1){
    $_SESSION["perfil"] = "registrado";
    header('Location: privado.php');
    $result->close();
   }
   else{
-    echo "<p>El usuario no existe</p>";
+    echo "<p class='error'>El usuario no existe</p>";
   }
 
   if ($_POST["username"] == "admin" && $_POST["password"] == "admin") {
@@ -53,14 +51,13 @@ if(isset($_POST["username"]) &&  isset($_POST["password"])){
 if(isset($_POST["newusername"]) &&  isset($_POST["newpassword"])){
 
   $sql = "INSERT INTO usuarios (username, pass) VALUES ('".$_POST["newusername"] ."','".$_POST["newpassword"]."')";
-
   $result = $conn->query("SELECT username FROM usuarios WHERE username='".$_POST["newusername"]."'");
 
   if(mysqli_num_rows($result)>=1){
-    echo "<p>El usuario ya existe</p>";
+    echo "<p class='error'>El usuario ya existe</p>";
   }else{
     if ($conn->query($sql) === TRUE) {
-      echo "<p>Usuario creado satisfacctoriamente</p>";
+      echo "<p>Usuario creado satisfactoriamente</p>";
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -107,9 +104,6 @@ if (isset($_SESSION["perfil"]) && $_SESSION["perfil"] == "admin") {
 <form method='post' action='index.php' name='signin-form'>
   <button type='submit' name='logout' value='logout'>Log Out</button>
 </form>";
-
-
-
 }else {
   echo "<form method='post' action='index.php' name='signin-form'>
   <div class='form-element'>

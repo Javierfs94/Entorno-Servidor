@@ -11,18 +11,15 @@
 ?>
 
 <?php
-  include "funciones.php";
   include "./class/Pila.php";
   include "./class/Carta.php";
   session_start();
 
-  $numero = 0;
-  $suma = 0;
-  
-if (isset($_POST["recursivo"])) {
-  $numeros = str_split(strval($_POST["recursivo"]));
-  foreach ($numeros as $key => $numero) {
-    $suma += $numero;
+function sumaDigitos($numero){
+  if ($numero == 0) {
+    return 0;
+  } else {
+    return sumaDigitos($numero/10) + ($numero%10);
   }
 }
 
@@ -63,12 +60,13 @@ if (isset($_POST["sacar"])) {
 
 echo "<h2>Ejercicio 1 Suma de dígitos por recursividad</h2>";
 echo "<form action='index.php' method='post'>
-<p>Número<input type='text' name='recursivo'></p>
+<p>Número <input type='text' name='recursivo'></p>
 <input type='submit' name='enviarRecursivo' value='Enviar'>
 </form>";
 
-if ($suma > 0) {
-  echo "<p>La suma de los dígitos es " . $suma . "</p>";
+if (isset($_POST["recursivo"])) {
+  echo "<p>La suma de los dígitos es " . sumaDigitos($_POST["recursivo"]) . "</p>";
+
 }
 
 echo "<hr>";
@@ -96,7 +94,7 @@ $carta->escribirCartas();
 
 $cartas = $carta->getCartas();
 foreach ($cartas as $key => $datos) {
-    echo "<br><a href=\"./archivos/carta".$datos[0].".txt\" download=\"./archivos/carta".$datos[0].".txt\">Descargar la carta de ".$datos[0]."</a>";
+    echo "<p><a href=\"./archivos/carta".$datos[0].".txt\" download=\"./archivos/carta".$datos[0].".txt\">Descargar la carta de ".$datos[0]."</a></p>";
 }
 ?>
 

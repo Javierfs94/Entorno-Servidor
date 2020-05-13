@@ -64,11 +64,18 @@ p.success,
 p.error {
     color: white;
     font-family: lato;
+    font-size: 24px;
     background: yellowgreen;
     display: inline-block;
     padding: 2px 10px;
 }
 
 p.error {
-    background: orangered;
+    color: orangered;
+    background: white;
+}
+
+p {
+    font-size: 24px;
+    padding: 2px 10px;
 }
