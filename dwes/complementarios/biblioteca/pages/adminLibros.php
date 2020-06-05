@@ -50,8 +50,8 @@ if (isset($_POST["addLibro"])) {
   header("Location: index.php?page=adminLibros");
 }
 
-
-echo "<form method='post' action=".$_SERVER["PHP_SELF"]."?page=adminLibros"." name='signin-form'>
+echo "<h2>Añadir un nuevo libro</h2>
+<form method='post' action=".$_SERVER["PHP_SELF"]."?page=adminLibros"." name='signin-form'>
     <div class='form-element'>
         <label>Titulo</label>
         <input type='text' name='titulo' required />

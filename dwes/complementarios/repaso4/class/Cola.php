@@ -20,7 +20,6 @@ class Cola{
      * Saca un elemento del array
      */
     public function pop(){
-        // array_pop($this->_elementos);
         array_shift($this->_elementos);
     }
 

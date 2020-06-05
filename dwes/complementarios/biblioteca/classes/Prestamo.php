@@ -26,7 +26,7 @@
         if($usuario != '') {
             $this->query = "
                 SELECT *
-                FROM usuarios
+                FROM bib_usuarios
                 WHERE usuario = :usuario";
             $this->parametros['usuario']= $usuario;	
             $this->get_results_from_query();
@@ -34,6 +34,18 @@
         }else {
             $this->mensaje = "Usuario no encontrado";
         }
+            return $this->rows;
+        }
+
+        # Muestra los prestamos de un lector
+        public function mostrarPrestamosLector($id=''){
+            $this->query = "
+            SELECT bib_libros.* FROM bib_libros, bib_prestamos, bib_usuarios WHERE 
+            bib_libros.id=bib_prestamos.id_libro AND bib_prestamos.id_usuario=bib_usuarios.id AND bib_usuarios.id=:id
+            ";
+            $this->parametros['id'] = $id;
+            $this->get_results_from_query();
+            $this->close_connection();
             return $this->rows;
         }
 
@@ -51,15 +63,13 @@
                     $this->close_connection();
         }
 
- 
-
        # Modificar un usuario
        public function edit($user_data=array()) {
         foreach ($user_data as $campo => $valor) {
             $$campo = $valor;
         }
         $this->query = "
-            UPDATE usuarios
+            UPDATE bib_usuarios
             SET nombre=:nombre,
             usuario=:usuario
             WHERE perfil = :perfil
@@ -84,7 +94,7 @@
 
         # Método constructor
         function __construct() {
-            $this->db_name = 'usuarios';
+            $this->db_name = 'bib_usuarios';
         }
         
         # Método destructor del objeto

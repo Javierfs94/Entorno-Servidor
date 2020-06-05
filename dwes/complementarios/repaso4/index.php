@@ -1,6 +1,6 @@
 <?php
 /*
-* Titulo: Ejercicios de repaso 2
+* Titulo: Ejercicios de repaso 4
 * Descripcion: 
 * 1.Imprime la suma de elementos de un vector A de subíndices 1..n con una función recursiva.
 * 2.Crear una clase que implemente la estructura de datos cola.

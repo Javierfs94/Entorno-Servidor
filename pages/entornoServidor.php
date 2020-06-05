@@ -102,6 +102,7 @@ echo '<div id="container">
         <li><a href="dwes\complementarios\autenticacion_usuarios_conBBDD\index.php">Sistema de autentificación básico de usuarios con BBDD</a></li>
         <li><a href="dwes\complementarios\puzzle\index.php">Puzzle Infantil</a></li>
         <li><a href="dwes\complementarios\biblioteca\index.php">Biblioteca</a></li>
+        <li><a href="dwes\complementarios\secretaria_virtual\index.php">Secretaría Virtual</a></li>
     </ul>
 </div>
 

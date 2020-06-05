@@ -29,7 +29,7 @@
         if($usuario != '') {
             $this->query = "
                 SELECT *
-                FROM usuarios
+                FROM bib_usuarios
                 WHERE usuario = :usuario";
             $this->parametros['usuario'] = $usuario;	
             $this->get_results_from_query();
@@ -42,7 +42,7 @@
     
        # Crear un nuevo usuario
         public function set($user_data = array()) {        
-                    $this->query = "INSERT INTO usuarios
+                    $this->query = "INSERT INTO bib_usuarios
                                     (nombre, apellidos, dni, usuario, pass, estado, perfil)
                                     VALUES
                                     (:nombre, :apellidos, :dni, :usuario, :pass, :estado, :perfil)";
@@ -63,7 +63,7 @@
                 if($usuario != '') {
                 $this->query = "
                     SELECT usuario
-                    FROM usuarios
+                    FROM bib_usuarios
                     WHERE usuario = :usuario";
                 $this->parametros['usuario']= $user_data["usuario"];
                 $this->get_results_from_query();
@@ -81,7 +81,7 @@
         $campo = $valor;
     }
     $this->query = "
-        UPDATE usuarios
+        UPDATE bib_usuarios
         SET nombre=:nombre,
         usuario=:usuario
         WHERE perfil = :perfil
@@ -99,7 +99,7 @@
         public function delete($id='') {
             if($id != '') {
             $this->query = "
-                DELETE FROM usuarios
+                DELETE FROM bib_usuarios
                 WHERE id = :id
                 ";
             $this->parametros['id'] = $id;
@@ -113,7 +113,7 @@
         public function activar($id='') {
             if($id != '') {
                 $this->query = "
-                UPDATE usuarios
+                UPDATE bib_usuarios
                 SET estado = :estado
                 WHERE id = :id
                 ";
@@ -127,7 +127,7 @@
         public function bloquear($id='') {
             if($id != '') {
                 $this->query = "
-                UPDATE usuarios
+                UPDATE bib_usuarios
                 SET estado = :estado
                 WHERE id = :id
                 ";
@@ -141,7 +141,7 @@
         public function mostrarUsuarios() {		
             $this->query = "
                 SELECT *
-                FROM usuarios";
+                FROM bib_usuarios";
             $this->get_results_from_query();
             $this->close_connection();
             return $this->rows;
@@ -153,7 +153,7 @@
 
         # Método constructor
         function __construct() {
-            $this->db_name = 'usuarios';
+            $this->db_name = 'bib_usuarios';
         }
         
         # Método destructor del objeto

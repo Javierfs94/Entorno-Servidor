@@ -23,7 +23,7 @@
         public function get() {	
                 $this->query = "
                     SELECT *
-                    FROM libros
+                    FROM bib_libros
                     WHERE titulo = :titulo AND autor = :autor";
                 $this->parametros['titulo'] = $titulo;
                 $this->parametros['autor'] = $autor;
@@ -46,7 +46,7 @@
         public function mostrarLibros() {		
             $this->query = "
                 SELECT *
-                FROM libros";
+                FROM bib_libros";
             $this->get_results_from_query();
             $this->close_connection();
             return $this->rows;
@@ -55,7 +55,7 @@
     
         # Crear un nuevo libro
         public function set($user_data = array()) {
-            $this->query = "INSERT INTO libros
+            $this->query = "INSERT INTO bib_libros
                                     (titulo, autor, editorial)
                                 VALUES
                                 (:titulo, :autor, :editorial)";
@@ -74,7 +74,7 @@
                 $$campo = $valor;
             }
             $this->query = "
-                UPDATE libros
+                UPDATE bib_libros
                 SET nombre=:nombre,
                 usuario=:usuario
                 WHERE perfil = :perfil
@@ -84,15 +84,56 @@
             $this->parametros['perfil'] = $perfil;
             
             $this->get_results_from_query();
-            //$this->execute_single_query();
             $this->mensaje = 'Usuario modificado';
+        }
+
+        # Reserva un libro
+        public function reservarLibro($id='') {
+            $this->query = "
+                UPDATE bib_libros
+                SET estado=:estado
+                WHERE id = :id
+                ";
+            $this->parametros['estado'] = "reservado";
+            $this->parametros['id'] = $id;
+            $this->get_results_from_query();
+            $this->mensaje = 'Libro actualizado';
+        }
+
+        # Devuelve un libro
+        public function devolverLibro($id='') {
+            $this->query = "
+                UPDATE bib_libros
+                SET estado=:estado
+                WHERE id = :id
+                ";
+            $this->parametros['estado'] = "disponible";
+            $this->parametros['id'] = $id;
+            $this->get_results_from_query();
+            $this->mensaje = 'Libro actualizado';
+        }
+
+        # Busca un libro
+        public function buscarLibro($busqueda=''){
+            if($busqueda!=''){
+                $this->query = "SELECT * FROM bib_libros
+                WHERE 
+                titulo LIKE :filtro or
+                autor LIKE :filtro or
+                editorial LIKE :filtro
+                ";
+                $this->parametros['filtro']="%".$busqueda."%";
+            }
+            $this->get_results_from_query();
+            $this->close_connection();
+            return $this->rows;
         }
 
         # Eliminar un libro
         public function delete($id='') {
             if($id != '') {
             $this->query = "
-                DELETE FROM libros
+                DELETE FROM bib_libros
                 WHERE id = :id
                 ";
             $this->parametros['id'] = $id;
@@ -103,7 +144,7 @@
 
         # Método constructor
         function __construct() {
-            // $this->db_name = 'libros';
+            // $this->db_name = 'bib_libros';
         }
         
         # Método destructor del objeto
