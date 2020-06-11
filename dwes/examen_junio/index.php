@@ -11,6 +11,7 @@
     include "./classes/Carta.php";
     include "./classes/Usuario.php";
     include "./classes/Serie.php";
+    include "./classes/Encuesta.php";
     include "./includes/funciones.php";
     session_start();
 
@@ -21,10 +22,12 @@ if (isset($_POST["exit"])) {
 if (!isset($_SESSION["logged"])) {
     $_SESSION["user"] = Usuario::singleton();
     $_SESSION["serie"] = Serie::singleton();
+    $_SESSION["encuesta"] = Encuesta::singleton();
     $_SESSION["logged"] = false;
     $_SESSION["perfil"] = "invitado";
     $_SESSION["idUser"] = null;
     $_SESSION["usuario"] = "";
+    $_SESSION["idPlanUser"] = 0;
 }
 
 if (isset($_POST["login"])) {
@@ -34,12 +37,17 @@ if (isset($_POST["login"])) {
             $_SESSION["logged"] = true;   
             $_SESSION["idUser"] = $array[0]["id"];
             $_SESSION["usuario"] = $array[0]["usuario"];
-            $_SESSION["perfil"] = $array[0]["perfil"];
+            $_SESSION["perfil"] = $array[0]["perfil"];            
             if ($_SESSION["perfil"] == "admin") {
-                header("Location: index.php?page=adminSeries");
-            }   
-            if ($_SESSION["perfil"] == "rol1") {
-                header("Location: index.php?page=user");
+                header("Location: index.php?page=admin");
+            } 
+            if ($_SESSION["perfil"] == "basico") {
+                $_SESSION["idPlanUser"] = 1;
+                header("Location: index.php?page=userSeries");
+            }  
+            if ($_SESSION["perfil"] == "premium" ) {
+                $_SESSION["idPlanUser"] = 2;
+                header("Location: index.php?page=userSeries");
             }         
         }
     } else {
@@ -86,11 +94,20 @@ include "./includes/nav.php";
         if (($_GET["page"]=="register")) {
             include ("./pages/register.php"); 
         }
-        if (($_GET["page"]=="adminSeries")) {
-            include ("./pages/adminSeries.php"); 
+        if (($_GET["page"]=="admin")) {
+            include ("./pages/admin.php"); 
         }   
-        if (($_GET["page"]=="user")) {
-            include ("./pages/user.php"); 
+        if (($_GET["page"]=="userPago")) {
+            include ("./pages/userPago.php"); 
+        }
+        if (($_GET["page"]=="userSeries")) {
+            include ("./pages/userSeries.php"); 
+        }
+        if (($_GET["page"]=="userEncuestas")) {
+            include ("./pages/userEncuestas.php"); 
+        }
+        if (($_GET["page"]=="visualizacionSerie")) {
+            include ("./pages/visualizacionSerie.php"); 
         }
     }else {
         include ("./pages/home.php");

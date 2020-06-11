@@ -11,7 +11,7 @@ class Carta{
             $fila = fgets($origen);
             $datos = explode(" ", $fila);
             if($datos[0]!= "" && $datos[1] != ""){
-               array_push($this ->_datos,array(trim($datos[0]), trim($datos[1]))); 
+               array_push($this ->_datos, array(trim($datos[0]), trim($datos[1]))); 
             }
         } while (!feof($origen));
         fclose($origen);
